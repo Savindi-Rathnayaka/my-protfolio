@@ -1587,4 +1587,233 @@ footer {
         font-size: 1rem;
     }
 }
+/* ==============================
+   MY CV SECTION
+   ============================== */
 
+.cv-section {
+    padding: 85px 8%;
+    text-align: center;
+    background: #0b1120;
+}
+
+.cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    border-radius: 22px;
+    background: linear-gradient(
+        135deg,
+        rgba(45, 212, 191, 0.08),
+        rgba(139, 92, 246, 0.10)
+    );
+}
+
+.cv-label {
+    color: #2dd4bf;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.cv-container h2 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.cv-container h2 span {
+    color: #2dd4bf;
+}
+
+.cv-container p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #cbd5e1;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.cv-button {
+    display: inline-block;
+    margin: 8px;
+    padding: 14px 25px;
+    border-radius: 10px;
+    background: #2dd4bf;
+    color: #0b1120;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    background: #5eead4;
+}
+
+.cv-download {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #2dd4bf;
+}
+
+.cv-download:hover {
+    background: rgba(45, 212, 191, 0.12);
+    color: #5eead4;
+}
+
+
+/* ==============================
+   EXTRA-CURRICULAR ACTIVITIES
+   ============================== */
+
+.activities-section {
+    padding: 90px 8%;
+    background: #0f172a;
+}
+
+.activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activities-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.activities-label {
+    color: #2dd4bf;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.activities-heading h2 {
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.activities-heading h2 span {
+    background: linear-gradient(
+        90deg,
+        #2dd4bf,
+        #818cf8,
+        #f472b6
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.activities-heading p {
+    color: #cbd5e1;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.activity-card {
+    position: relative;
+    padding: 32px 25px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 18px;
+    background: #111c31;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-7px);
+    border-color: #2dd4bf;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.activity-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.activity-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    background: rgba(45, 212, 191, 0.12);
+    color: #2dd4bf;
+    font-size: 1.8rem;
+}
+
+.activity-card h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 1.35rem;
+}
+
+.activity-role {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #c4b5fd;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.activity-card p {
+    color: #cbd5e1;
+    font-size: 1.02rem;
+    line-height: 1.85;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .activities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-section,
+    .activities-section {
+        padding: 60px 6%;
+    }
+
+    .cv-container {
+        padding: 35px 20px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        padding: 28px 22px;
+    }
+
+    .cv-button {
+        display: block;
+        margin: 12px auto;
+        max-width: 220px;
+    }
+}
